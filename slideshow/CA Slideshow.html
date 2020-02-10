@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
+<style>
+body{
+background-color: black
+}
+#container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+
+#slideshow img {
+	max-height: 600px;
+	max-width: 960px;
+	position: relative;
+}
+</style>
+</head>
+<body>
+<div id="container">
+<div id="slideshow" class="cycle-slideshow"
+	data-cycle-fx = "scrollVert"
+	data-cycle-speed = "1000"
+	data-cycle-timeout = "3000"
+	data-cycle-center-horz=true
+    data-cycle-center-vert=true
+	data-cycle-pager = "#pager"
+	data-cycle-pager-template ="<a href='#'><img src='{{src}}' height=100 width=150 />"
+	data-cycle-manual-fx = "scrollHorz"
+	data-cycle-manual-speed = "500"
+	data-cycle-pager-fx = "scrollVert"
+	data-cycle-slides="> div"
+	>
+	
+	<span class="cycle-prev"><img style="position: relative; bottom: 200px; left: 140px;" src="arrow2.png" /></span>
+    <span class="cycle-next"><img style="position: relative; bottom: 200px; float: right; right: 140px;" src="arrow.png" /></span>
+	
+	
+	<div>
+	<img src="img1.png" alt="ps4" />
+	</div>
+	
+	<div>
+	<img src="img2.png" alt="xbox1" />
+	</div>
+	
+	<div>
+	<img src="img3.png" alt="mice"/>
+	</div>
+	
+	<div>
+	<img src="img4.png" alt="genres"/>
+	</div>
+	
+	
+</div>
+</div>
+</body>
+</html>

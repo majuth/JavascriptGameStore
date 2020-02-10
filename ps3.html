@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/stylesheet.css">
+<link rel="shortcut icon" href="pics/JJM 4.png">
+<title> JJM Gaming </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+<script src="http://malsup.github.io/jquery.cycle2.center.js"></script>
+<script src="shoppingcartv2.js"> </script>
+<style>
+body {
+background-color: black
+}
+
+#container {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	margin-top: 120px;
+	z-index: 5;
+}
+
+
+#slideshow img {
+	max-height: auto;
+	max-width: 900px;
+	position: relative;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;
+}
+
+h1 {
+color: black
+}
+
+td {
+border: 1px solid black
+}
+
+td img {
+display: block; margin-left: auto; margin-right: auto
+}
+
+
+
+
+.item:hover .item-overlay.top {
+  top: 0;
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  overflow: hidden;
+  text-align: center;
+  width: 100%;
+  -moz-transition: top 0.3s;
+  -webkit-transition: top 0.3s;
+  transition: top 0.3s;
+}
+
+.item-overlay.top {
+  top: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+position: relative;
+overflow: hidden;
+}
+
+</style>
+</head>
+<body>
+<div id="topp" style="height:160px; width: 100%">
+<span id="subnav">
+<div id="nav">
+    <div id="nav_wrapper">
+        <ul style="width: 100%">
+            <li><a href="#"> PS3 </a>
+            </li>
+            <li> <a href="#"> PS4 </a>
+            </li>
+            <li> <a href="#"> Xbox 360</a>
+            </li>
+			<li style="padding-top: 5px;">
+			<img src="pics/JJM%204.png" alt="JJM logo" style="width: 80px; height: auto;">
+			</li>
+			<li> <a href="#"> Xbox One </a>
+            </li>
+            <li> <a href="#"> PC </a>
+            </li>
+			<li style="padding-top: 14px; margin-top: 2px;"><a Onclick = "document.getElementById('light1').style.display='block';document.getElementById('fade1').style.display='block'"> 
+			<img src="pics/cart1.png" alt="shoppingcart" style="width: 18px; height auto;">
+			<p id="amount" style="display: inline; text-decoration: none; font-family: kc; color: white;"> 0 </p>
+			</a> </li>
+        </ul> 
+		
+	<!-- Confirm added to cart Starts here -->
+			<div id="light2" class="white_content">
+		<a href = "javascript:void(0)" onclick = "document.getElementById('light2').style.display='none';document.getElementById('fade2').style.display='none'">
+		  <img src="pics/close.png" alt="close" style="width: 3%; height: auto; float: right;">
+		</a> 
+		<img src="pics/whitecheck.png" alt="checkmark" style="width: 60%; height: auto; margin-left: auto; margin-right: auto; display: block; padding-top: 3%;">
+		<br>
+		<p id="findt" style="font-size: 200%"> Item Added To Cart </p>
+	</div>
+	 <div id="fade2" class="black_overlay"></div>
+	 <!-- Confirm added to cart Ends here -->
+	 <!-- Popup item Starts here -->
+			<div id="light3" class="white_content">
+	</div>
+	 <div id="fade3" class="black_overlay"></div>
+	 <!-- Popup item Ends here -->
+ <svg width='100%' viewBox="0 0 100 4" preserveAspectRatio="none" style="position: static; top: 82px; left: 0px; z-index: 9999;">
+   <line x1="0" y1="0" x2="38.2%" y2="0" style="stroke:white;stroke-width:1%" />
+   <line x1="38.1%" y1="0" x2="41.3%" y2="3.9" style="stroke:white;stroke-width:0.5%" />
+   <line x1="41.2%" y1="3.85" x2="58.8%" y2="3.85" style="stroke:white;stroke-width:0.5%" />
+   <line x1="58.7%" y1="3.9" x2="61.9%" y2="0" style="stroke:white;stroke-width:0.5%" />
+   <line x1="61.8%" y1="0" x2="100%" y2="0" style="stroke:white;stroke-width:1%" />
+   <polygon points="38.5,0 41.4,3.5 58.6,3.5 61.5,0" style="fill:black;stroke:black;stroke-width:0.5%" />
+ </svg>
+    </div>
+	</span>
+	</div>
+	<div id="light1" class="white_content">
+	<!-- Shopping Cart Elements Start -->
+		<a href = "javascript:void(0)" onclick = "document.getElementById('light1').style.display='none';document.getElementById('fade1').style.display='none'">
+		  <img src="pics/close.png" alt="close" style="width: 3%; height: auto; float: right;">
+		</a> 
+		<p id="findt"> Shopping Cart </p>
+		<div id="items">
+		</div>
+		<div id="finalprice"> </div>
+	<!-- Shopping Cart Elements End -->
+	</div>
+	 <div id="fade1" class="black_overlay"></div>
+    <!-- Nav wrapper end -->
+</div>
+<!-- Nav end -->
+<div id="pagecontent">
+
+<h2 style="color: white; padding-left: 20px; text-align: center; padding-top: 60px; font-family: kc; ; letter-spacing: 1px;">PS3 Games</h1>
+<br>
+<br>
+<br>
+<table style="width: 100%">
+  <tr>
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 15; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="http://img.game.co.uk/ml2/2/3/9/4/239419_ps3_b.png" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/arkhamcity.png"/></div></div></td>
+     </a>
+	 <td> <a href="javascript:void(0)" Onclick="itemnumber = 16; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	 <div class="item"><img style="width: auto; height: 200px;" src="http://console.downloadha.com/hosein/Game/XBOX360/Battlefield%20Hardline/Battlefield-Hardline-ps3-cover-large.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/battlefieldhardline.png" /></div></div></td></td>	
+    </a>
+	<td><a href="javascript:void(0)" Onclick="itemnumber = 17; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="http://blog.flubit.com/wp-content/uploads/2013/03/10608167-1352808794-225298.jpeg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/cod2.png" /></div></div></td></td>
+	</a>
+
+	
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 18; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="https://s.s-bol.com/imgbase0/imagebase3/extralarge/FC/2/9/0/2/1004004013532092.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/destiny.png" /></div></div></td></td>
+	</a>
+	
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 19; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="http://cdn3-www.playstationlifestyle.net/assets/uploads/2015/09/callofdutyblackops3ps3boxart.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/cod3.png" /></div></div></td></td>		
+	</a>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table style="width: 100%">
+  <tr>
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 20; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="pics/ps3/6.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/dragonballxeno.png"/></div></div></td>
+     </a>
+	 <td> <a href="javascript:void(0)" Onclick="itemnumber = 21; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	 <div class="item"><img style="width: auto; height: 200px;" src="pics/ps3/7.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/fifa15.png" /></div></div></td></td>	
+    </a>
+	<td><a href="javascript:void(0)" Onclick="itemnumber = 22; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="pics/ps3/8.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/gtav.png" /></div></div></td></td>
+	</a>
+
+	
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 23; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="pics/ps3/9.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/justdance.png" /></div></div></td></td>
+	</a>
+	
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 24; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="pics/ps3/10.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/lastofus.png" /></div></div></td></td>		
+	</a>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+<table style="width: 100%">
+  <tr>
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 25; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="pics/ps3/11.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/legoavengers.png"/></div></div></td>
+     </a>
+	 <td> <a href="javascript:void(0)" Onclick="itemnumber = 26; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	 <div class="item"><img style="width: auto; height: 200px;" src="pics/ps3/12.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/naruto.png" /></div></div></td></td>	
+    </a>
+	<td><a href="javascript:void(0)" Onclick="itemnumber = 27; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="pics/ps3/13.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/nba2k16.png" /></div></div></td></td>
+	</a>
+
+	
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 28; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="pics/ps3/14.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/NHL2015.png" /></div></div></td></td>
+	</a>
+	
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 29; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: auto; height: 200px;" src="pics/ps3/15.jpg" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3/talesofzestiria.png" /></div></div></td></td>		
+	</a>
+  </tr>
+</table>
+<br>
+<br>
+<h2 style="color: white; padding-left: 20px; text-align: center; padding-top: 60px; font-family: kc; ; letter-spacing: 1px;">PS3 Accesories</h1>
+
+<br>
+<br>
+<br>
+<table style="width: 100%">
+  <tr>
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 30; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: 150px; height: auto;" src="pics/ps3/5.png" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3accessories/move.png"/></div></div></td>
+     </a>
+	 <td> <a href="javascript:void(0)" Onclick="itemnumber = 31; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	 <div class="item"><img style="width: 200px; height: auto;" src="pics/ps3/6.png" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3accessories/wirelesskeyboard.png" /></div></div></td></td>	
+    </a>
+	<td><a href="javascript:void(0)" Onclick="itemnumber = 32; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: 200px; height: auto;" src="pics/ps3/7.png" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3accessories/controller.png" /></div></div></td></td>
+	</a>
+
+	
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 33; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: 200px; height: auto;" src="pics/ps3/8.png" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3accessories/camera.png" /></div></div></td></td>
+	</a>
+	
+    <td><a href="javascript:void(0)" Onclick="itemnumber = 34; writed(); document.getElementById('light3').style.display='block';document.getElementById('fade3').style.display='block'">
+	<div class="item"><img style=" width: 200px; height: auto;" src="pics/ps3/9.png" /><div class="item-overlay top"><img style="width: auto; height: 200px;" src="pics/ps3accessories/3dglasses.png" /></div></div></td></td>		
+	</a>
+  </tr>
+</table>
+<br>
+<br>
+<br>
+
+</div>
+<!-- Footer Start -->
+<div id="fdiv">
+<table id="footer">
+	<tr>
+		<td colspan="4" style="text-align: center;"> <div id="fjmmpic"> <a href="#topp" style="text-decoration: none;"> <img src="pics/JJM 3.png" alt="JJM logo" style="width: 70%; height: auto;"> 
+		<p id="ftitle"> JJM </p> </div> </a> </td>
+	</tr>
+	<tr>
+		<td> <a href="https://twitter.com/jjmgaming101"> <img class="fpic" src="pics/twitter3.png" alt="twitter"> </a> </td>
+		<td> <a href="https://www.youtube.com/channel/UC3e3IWxm3N9CQM3usp-e1tQ"> <img class="fpic" src="pics/youtube1.png" alt="youtube"> </a> </td>
+		<td> <a href="https://www.facebook.com/people/Jjm-Gaming/100011099384835"> <img class="fpic" src="pics/facebook1.png" alt="facebook"> </a> </td>
+		<td> <a href="https://www.instagram.com/jjmgaming101/"> <img class="fpic" src="pics/instagram1.png" alt="instagram"> </a> </td>
+	</tr>
+	<tr>
+		<td style="padding-top: 10px;"> <a href="#topp"> <img class="fpic" src="pics/topofpage.png" alt="top of page"> </a> </td>
+		<td colspan="2"> <img class="fpic" src="pics/support.png" alt="contact info"> </td>
+		<td> <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" style="text-decoration: none; color: white;">
+		<img class="fpic" src="pics/findstore.png" alt="Find Store"> </a> </td>
+	</tr>
+		 </table> 
+		  <div id="light" class="white_content">
+		  <!-- Find Store Content Starts -->
+		  <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+		  <img src="pics/close.png" alt="close" style="width: 3%; height: auto; float: right;">
+		  </a> 
+		  <p id="findt"> Find Store </p>
+		  <br>
+		  <br>
+		  <table id="mapselect">
+			<tr>
+				<td>
+				<p class="location"> Richmond Hill <br> <span class="locations"> 225 High Tech Rd., Unit 3 
+				<br> Richmond Hill, ON, L4B 0A6 </span> </p>
+				</td>
+				<td>
+				<a href="http://bit.ly/1Ud6fuN"> <input type="submit" value="Select" class="select"> </a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<p class="location"> Woodbridge <br> <span class="locations"> 7850 Weston Rd. , Bldg. E Unit 1
+				<br> Woodbridge, ON, L4L 9N8 </span></p>
+				</td>
+				<td>
+				<a href="http://bit.ly/1lxwLmz"> <input type="submit" value="Select" class="select"> </a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<p class="location"> North York <br> <span class="locations"> 5095 Yonge St., Suite A14
+				<br> North York, ON, M2N 6Z4 </span></p>
+				</td>
+				<td>
+				<a href="http://bit.ly/1Pq77rG"> <input type="submit" value="Select" class="select"> </a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<p class="location"> Downsview <br> <span class="locations"> 695 Wilson Ave.
+				<br> Toronto, ON, M3K 1E3 </span></p>
+				</td>
+				<td>
+				<a href="http://bit.ly/1QfJHbY"> <input type="submit" value="Select" class="select"> </a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<p class="location"> Weston <br> <span class="locations"> 2625A Weston Rd.
+				<br> Toronto, ON, M9N 3V8 </span></p>
+				</td>
+				<td>
+				<a href="http://bit.ly/1T71BAe"> <input type="submit" value="Select" class="select"> </a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<p class="location"> Markham <br> <span class="locations"> 5000 Hwy 7 E, Unit 2070L
+				<br> Markham, ON, L3R 4M9 </span></p>
+				</td>
+				<td>
+				<a href="http://bit.ly/1PGoTay"> <input type="submit" value="Select" class="select"> </a>
+				</td>
+			</tr>
+		</table>
+		<!-- Find Store Content Ends -->
+		  </div>
+		  <div id="fade" class="black_overlay"></div>
+		
+	</tr>
+</table>
+</div>
+<!--Jquery for smooth scroll to anchors-->
+<script>
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 1000);
+    return false;
+});
+</script>
+</body>
+</html>
